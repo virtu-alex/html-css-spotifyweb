@@ -1,0 +1,155 @@
+:root {
+    --play-bar-h: 100px;
+    --logo-h: 100px;
+    --side-w: 150px;
+    --m-height: 100px;
+    --w-50: 50%;
+    --w-20: 20%
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+}
+
+.debug * {
+    border: 1px dashed red;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.d-flex{
+    display: flex;
+}
+
+/* main container */
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+/* SIDEBAR */
+
+.side-bar {
+    width: var(--side-w);
+    height: calc(100% - var(--play-bar-h));
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    flex: 0 0 var(--logo-h);
+}
+
+.library {
+    flex: 1 1 15%;
+}
+
+.playlist {
+    flex: 1 1 80%;
+}
+
+.account {
+    flex: 1 1 5%;
+}
+
+/* CONTENUTO PRINCIPALE */
+
+.main-content {
+    padding-top: var(--logo-h);
+    flex: 1 0 calc(100% - var(--side-w));
+    height: calc(100% - var(--play-bar-h));
+}
+
+/* TOP BAR */
+
+.top-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    flex-wrap: wrap;
+}
+
+.top-bar-col{
+    width: calc(100% / 3);
+    height: 50%;
+}
+
+/* RECENTLY PLAYED MUSIC */
+
+.recent-play{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recent-col{
+    width: var(--w-50);
+    min-height: var(--m-height)
+}
+
+
+/* CREATED FOR */
+
+.created-for{
+    display: flex;
+}
+
+.created-for-col{
+    width: var(--w-50);
+    min-height: var(--m-height)
+}
+
+/* POPULAR SONGS */
+
+.popular-artists{
+    display: flex;
+}
+
+.popular-col{
+    width: var(--w-50);
+    min-height: var(--m-height);
+}
+
+
+/* FOOTER PLAY-BAR */
+
+.play-bar {
+    height: var(--play-bar-h);
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-name {
+    width: var(--w-20);
+}
+
+.reproduction-bar {
+    flex-grow: 1;
+}
+
+.volume {
+    width: var(--w-20);
+}
+
+
+
+@media screen and (min-width:1200px) {
+    :root {
+        --side-w: 300px;
+    }
+}
