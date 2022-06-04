@@ -16,13 +16,13 @@
 
 body {
     height: 100vh;
-    background-color: black;
     overflow: hidden;
     color: white;
+    font-family: Montserrat, sans-serif;
 }
 
-.debug * {
-    border: 1px dashed blue;
+.side-bar li{
+    padding: 5px;
 }
 
 /* GENERICS */
@@ -39,7 +39,23 @@ img {
     width: 100%;
 }
 
+h2{
+    font-size: 2.5rem;
+}
+
+h4{
+    padding-top: 10px;
+}
+
+span{
+    color: grey;
+}
+
 /* UTILS */
+
+.flex-dir-clmn{
+    flex-direction: column;
+}
 
 .pad-small {
     padding: 0px 10px;
@@ -51,6 +67,9 @@ img {
 
 .d-flex {
     display: flex;
+}
+.w100{
+    width: 100%;
 }
 
 .txt-center {
@@ -68,6 +87,12 @@ img {
     background-color: grey;
 }
 
+.upgrade-button{
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
+
 /* MAIN CONTAINER */
 
 .main-container {
@@ -76,14 +101,17 @@ img {
     height: 100%;
 }
 
-/* SIDEBAR */
+/* SIDEBAR CONTAINER */
 
 .side-bar {
     width: var(--side-w);
     height: calc(100% - var(--play-bar-h));
     display: flex;
     flex-direction: column;
+    background-color: black;
 }
+
+/* SIDEBAR LOGO */
 
 .logo {
     flex: 0 0 var(--logo-h);
@@ -96,29 +124,29 @@ img {
     width: 120px;
 }
 
+/* SIDEBAR LIBRARY */
+
 .library {
     flex: 1 1 15%;
-    display: flex;
-    align-items: center;
 }
 
 .library a {
     color: grey;
 }
 
-.library img {
-    width: 25px;
-    display: inline-block;
-}
+/* SIDEBAR PLAYLIST */
 
 .playlist {
     flex: 1 1 80%;
+    padding-left: 10px;
 }
 
 .playlist ul li {
-    padding: 5px;
+    padding: 10px 5px;
     color: grey;
 }
+
+/* SIDEBAR ACCOUNT */
 
 .account {
     flex: 1 1 5%;
@@ -130,6 +158,8 @@ img {
     padding-top: var(--logo-h);
     flex: 1 0 calc(100% - var(--side-w));
     height: calc(100% - var(--play-bar-h));
+    background-color: #141922;
+    position: relative;
 }
 
 /* TOP BAR */
@@ -143,10 +173,12 @@ img {
 
 .top-bar-col {
     width: calc(100% / 3);
+    padding: 10px;
 }
 
 .top-bar-col a {
     color: grey;
+    font-weight: bold;
 }
 
 /* RECENTLY PLAYED MUSIC */
@@ -169,8 +201,8 @@ img {
 }
 
 .created-for-col {
-    width: var(--w-50);
-    min-height: var(--m-height)
+    min-height: var(--m-height);
+    width: var(--w-50)
 }
 
 /* POPULAR SONGS */
@@ -184,7 +216,7 @@ img {
     min-height: var(--m-height);
 }
 
-/* FOOTER PLAY-BAR */
+/* PLAY-BAR CONTAINER */
 
 .play-bar {
     height: var(--play-bar-h);
@@ -192,25 +224,41 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #282828;
+    z-index: 1;
 }
+
+/* PLAY-BAR LEFT */
 
 .song-name {
     width: var(--w-20);
     display: flex;
 }
 
+.play-bar img {
+    width: 60px;
+    height: 60px;
+}
+
+.icons-left-play-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* PLAY-BAR CENTER */
+
+
 .reproduction-bar {
     flex-grow: 1;
 }
+
+/* PLAY-BAR RIGHT */
 
 .volume {
     width: var(--w-20);
 }
 
-.play-bar img {
-    width: 50px;
-    height: 50px;
-}
+
 
 /* MEDIA QUERY TABLET 576 px */
 
