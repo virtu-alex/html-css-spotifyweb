@@ -1,6 +1,6 @@
 :root {
     --play-bar-h: 100px;
-    --logo-h: 100px;
+    --logo-h: 70px;
     --side-w: 150px;
     --m-height: 100px;
     --w-50: 50%;
@@ -16,24 +16,59 @@
 
 body {
     height: 100vh;
-    overflow: hidden;
     background-color: black;
+    overflow: hidden;
     color: white;
 }
 
 .debug * {
-    border: 1px dashed red;
+    border: 1px dashed blue;
 }
 
-ul{
+/* GENERICS */
+
+ul {
     list-style-type: none;
 }
 
-.d-flex{
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* UTILS */
+
+.pad-small {
+    padding: 0px 10px;
+}
+
+.pad-all {
+    padding: 10px;
+}
+
+.d-flex {
     display: flex;
 }
 
-/* main container */
+.txt-center {
+    text-align: center;
+}
+
+.b-radius50 {
+    border-radius: 50%;
+}
+
+/* ICONS */
+
+.fa-plus {
+    color: black;
+    background-color: grey;
+}
+
+/* MAIN CONTAINER */
 
 .main-container {
     display: flex;
@@ -52,14 +87,37 @@ ul{
 
 .logo {
     flex: 0 0 var(--logo-h);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
 }
 
 .library {
     flex: 1 1 15%;
+    display: flex;
+    align-items: center;
+}
+
+.library a {
+    color: grey;
+}
+
+.library img {
+    width: 25px;
+    display: inline-block;
 }
 
 .playlist {
     flex: 1 1 80%;
+}
+
+.playlist ul li {
+    padding: 5px;
+    color: grey;
 }
 
 .account {
@@ -76,25 +134,29 @@ ul{
 
 /* TOP BAR */
 
-.top-bar{
+.top-bar {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.top-bar-col{
+.top-bar-col {
     width: calc(100% / 3);
+}
+
+.top-bar-col a {
+    color: grey;
 }
 
 /* RECENTLY PLAYED MUSIC */
 
-.recent-play{
+.recent-play {
     display: flex;
     flex-wrap: wrap;
 }
 
-.recent-col{
+.recent-col {
     width: var(--w-50);
     min-height: var(--m-height)
 }
@@ -102,26 +164,25 @@ ul{
 
 /* CREATED FOR */
 
-.created-for{
+.created-for {
     display: flex;
 }
 
-.created-for-col{
+.created-for-col {
     width: var(--w-50);
     min-height: var(--m-height)
 }
 
 /* POPULAR SONGS */
 
-.popular-artists{
+.popular-artists {
     display: flex;
 }
 
-.popular-col{
+.popular-col {
     width: var(--w-50);
     min-height: var(--m-height);
 }
-
 
 /* FOOTER PLAY-BAR */
 
@@ -135,6 +196,7 @@ ul{
 
 .song-name {
     width: var(--w-20);
+    display: flex;
 }
 
 .reproduction-bar {
@@ -145,24 +207,29 @@ ul{
     width: var(--w-20);
 }
 
+.play-bar img {
+    width: 50px;
+    height: 50px;
+}
+
 /* MEDIA QUERY TABLET 576 px */
 
 
 @media screen and (min-width: 576px) {
-    
-    .recent-col{
+
+    .recent-col {
         width: var(--w-25);
     }
 
-    .top-bar-col{
+    .top-bar-col {
         width: calc(100% / 5);
     }
 
-    .created-for-col{
+    .created-for-col {
         width: var(--w-25);
     }
 
-    .popular-col{
+    .popular-col {
         width: var(--w-25);
     }
 }
@@ -170,15 +237,27 @@ ul{
 /* MEDIA QUERY DESKTOP 992 px */
 
 @media screen and (min-width: 992px) {
-    .top-bar-col{
+    .top-bar-col {
         width: calc(100%/ 6);
     }
 
-    .recent-col{
+    .recent-col {
         width: calc(100% / 6);
     }
 
-    .created-for-col{
+    .created-for-col {
         width: var(--w-25);
+    }
+}
+
+/* MEDIA QUERY XS 360px */
+
+@media screen and (max-width: 360px) {
+    .side-bar{
+        display: none;
+    }
+
+    .top-bar-col {
+        width: calc(100%/ 4);
     }
 }
