@@ -1,8 +1,7 @@
 :root {
     --play-bar-h: 100px;
     --logo-h: 70px;
-    --side-w: 150px;
-    --m-height: 100px;
+    --side-w: 180px;
     --w-50: 50%;
     --w-20: 20%;
     --w-25: 25%;
@@ -142,6 +141,7 @@ span{
 }
 
 .playlist ul li {
+    font-size: 1rem;
     padding: 10px 5px;
     color: grey;
 }
@@ -190,7 +190,6 @@ span{
 
 .recent-col {
     width: var(--w-50);
-    min-height: var(--m-height)
 }
 
 
@@ -201,7 +200,6 @@ span{
 }
 
 .created-for-col {
-    min-height: var(--m-height);
     width: var(--w-50)
 }
 
@@ -213,7 +211,6 @@ span{
 
 .popular-col {
     width: var(--w-50);
-    min-height: var(--m-height);
 }
 
 /* PLAY-BAR CONTAINER */
@@ -222,7 +219,6 @@ span{
     height: var(--play-bar-h);
     min-width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     background-color: #282828;
     z-index: 1;
@@ -245,18 +241,55 @@ span{
     flex-direction: column;
     justify-content: center;
 }
-/* PLAY-BAR CENTER */
 
+/* PLAY-BAR CENTER */
 
 .reproduction-bar {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.reproduction-bar i{
+    padding: 15px;
+    font-size: 2rem;
+}
+.reproduction-bar span{
+    padding: 0 10px;
+    color: white;
+}
+
+.reproduction-time{
+    display: flex;
+}
+
+.time{
+    height: 8px;
+    width: 300px;
+    background-color: grey;
+    align-self: center;
 }
 
 /* PLAY-BAR RIGHT */
 
 .volume {
     width: var(--w-20);
+    display: flex;
 }
+
+.volume i{
+    padding-right: 10px;
+}
+
+.volume-bar{
+    height: 8px;
+    width: 150px;
+    background-color: grey;
+    align-self: center;
+}
+
+
+
 
 
 
