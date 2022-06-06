@@ -20,8 +20,16 @@ body {
     font-family: Montserrat, sans-serif;
 }
 
-.side-bar li{
+.side-bar li {
     padding: 5px;
+}
+
+.side-bar li:hover {
+    filter: brightness(200%);
+}
+
+.top-bar a:hover {
+    filter: brightness(200%);
 }
 
 /* GENERICS */
@@ -38,26 +46,30 @@ img {
     width: 100%;
 }
 
-h2{
+h2 {
     font-size: 2.5rem;
 }
 
-h4{
+h4 {
     padding-top: 10px;
 }
 
-span{
+span {
     color: grey;
 }
 
 /* UTILS */
 
-.flex-dir-clmn{
+.flex-dir-clmn {
     flex-direction: column;
 }
 
 .pad-small {
     padding: 0px 10px;
+}
+
+.pad-bot10 {
+    padding-bottom: 10px;
 }
 
 .pad-all {
@@ -67,7 +79,8 @@ span{
 .d-flex {
     display: flex;
 }
-.w100{
+
+.w100 {
     width: 100%;
 }
 
@@ -79,17 +92,47 @@ span{
     border-radius: 50%;
 }
 
+
+.pos-rel {
+    position: relative;
+}
+
 /* ICONS */
+
 
 .fa-plus {
     color: black;
     background-color: grey;
 }
 
-.upgrade-button{
+button {
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+
+button a {
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+.upgrade-button {
     position: absolute;
     top: 20px;
     right: 25px;
+    border-radius: 30px;
+}
+
+header {
+    background-color: #080B12;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 70px;
+    z-index: 1;
 }
 
 /* MAIN CONTAINER */
@@ -98,6 +141,7 @@ span{
     display: flex;
     flex-wrap: wrap;
     height: 100%;
+
 }
 
 /* SIDEBAR CONTAINER */
@@ -108,6 +152,8 @@ span{
     display: flex;
     flex-direction: column;
     background-color: black;
+    z-index: 2;
+    overflow-y: auto;
 }
 
 /* SIDEBAR LOGO */
@@ -155,11 +201,12 @@ span{
 /* CONTENUTO PRINCIPALE */
 
 .main-content {
-    padding-top: var(--logo-h);
     flex: 1 0 calc(100% - var(--side-w));
     height: calc(100% - var(--play-bar-h));
     background-color: #141922;
-    position: relative;
+    overflow-y: auto;
+    padding-top: 100px;
+
 }
 
 /* TOP BAR */
@@ -192,6 +239,29 @@ span{
     width: var(--w-50);
 }
 
+/* HOVER RECENTLY PLAYED */
+
+.hover-swap {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hover-swap i {
+    font-size: 3rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.recent-card:hover .hover-swap {
+    display: block;
+}
 
 /* CREATED FOR */
 
@@ -203,6 +273,12 @@ span{
     width: var(--w-50)
 }
 
+/* CREATED FOR HOVER EFFECT */
+
+.created-for-card:hover .hover-swap {
+    display: block;
+}
+
 /* POPULAR SONGS */
 
 .popular-artists {
@@ -211,6 +287,13 @@ span{
 
 .popular-col {
     width: var(--w-50);
+}
+
+/* POPULAR ARTISTS HOVER EFFECT */
+
+.popular-card:hover .hover-swap {
+    display: block;
+    border-radius: 50%;
 }
 
 /* PLAY-BAR CONTAINER */
@@ -227,8 +310,9 @@ span{
 /* PLAY-BAR LEFT */
 
 .song-name {
-    width: var(--w-20);
+    flex-basis: var(--w-20);
     display: flex;
+    align-items: center;
 }
 
 .play-bar img {
@@ -236,7 +320,7 @@ span{
     height: 60px;
 }
 
-.icons-left-play-bar{
+.icons-left-play-bar {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -245,27 +329,34 @@ span{
 /* PLAY-BAR CENTER */
 
 .reproduction-bar {
-    flex-grow: 1;
+    flex-basis: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.reproduction-bar i{
-    padding: 15px;
-    font-size: 2rem;
+
+.reproduction-bar i {
+    font-size: 1.5rem;
 }
-.reproduction-bar span{
-    padding: 0 10px;
+
+.reproduction-icons {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.reproduction-bar span {
     color: white;
 }
 
-.reproduction-time{
+.reproduction-time {
     display: flex;
 }
 
-.time{
-    height: 8px;
-    width: 300px;
+.time {
+    height: 10px;
+    width: 70%;
     background-color: grey;
     align-self: center;
 }
@@ -273,30 +364,28 @@ span{
 /* PLAY-BAR RIGHT */
 
 .volume {
-    width: var(--w-20);
     display: flex;
+    flex-basis: var(--w-20);
+    justify-content: space-between;
 }
 
-.volume i{
-    padding-right: 10px;
-}
 
-.volume-bar{
+/* .volume-bar{
     height: 8px;
-    width: 150px;
     background-color: grey;
     align-self: center;
+} */
+
+.volume-icons {
+    width: 100%;
 }
 
 
 
+/* MEDIA QUERY TABLET 992 px */
 
 
-
-/* MEDIA QUERY TABLET 576 px */
-
-
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 992px) {
 
     .recent-col {
         width: var(--w-25);
@@ -315,9 +404,9 @@ span{
     }
 }
 
-/* MEDIA QUERY DESKTOP 992 px */
+/* MEDIA QUERY DESKTOP 1200 px */
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
     .top-bar-col {
         width: calc(100%/ 6);
     }
@@ -331,10 +420,10 @@ span{
     }
 }
 
-/* MEDIA QUERY XS 360px */
+/* MEDIA QUERY XS 576px */
 
-@media screen and (max-width: 360px) {
-    .side-bar{
+@media screen and (max-width: 576px) {
+    .side-bar {
         display: none;
     }
 
