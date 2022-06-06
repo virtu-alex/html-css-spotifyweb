@@ -8,8 +8,7 @@
     <script src="https://kit.fontawesome.com/3ec4a20eeb.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Titolo</title>
@@ -20,6 +19,8 @@
     <!-- SIDEBAR -->
 
     <div class="main-container">
+        
+        
         <div class="side-bar">
             <!-- LOGO SECTION -->
             <div class="logo">
@@ -29,7 +30,7 @@
             <div class="library">
                 <ul>
                     <li><i class="fa-solid fa-house pad-small"></i><a href="#"> Home</a></li>
-                    <li><i class="fa-solid fa-magnifying-glass pad-small"></i><a href="£"> Cerca</a></li>
+                    <li><i class="fa-solid fa-magnifying-glass pad-small"></i><a href="#"> Cerca</a></li>
                     <li><i class="fa-solid fa-book-open pad-small"></i><a href="#"> La tua libreria</a></li>
                 </ul>
             </div>
@@ -39,27 +40,29 @@
             <div class="playlist">
                 <ul>
                     <li>
-                        <h5>PLAYLIST</h5>
+                        <h5 class="c-white"><a href="">PLAYLIST</a></h5>
                     </li>
-                    <li><i class="fa-solid fa-plus pad-all"></i> Crea Playlist</li>
-                    <li class="pad-all">Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
+                    <li><i class="fa-solid fa-plus pad-all"></i><a class="pad-small" href="">Crea Playlist</a></li>
+                    <li class="pad-all"><a href="">Nome Playlist</a></li>
+                    <li><a href=""> Nome Playlist</a></li>
+                    <li><a href=""> Nome Playlist</a></li>
+                    <li><a href=""> Nome Playlist</a></li>
+                    <li><a href=""> Nome Playlist</a></li>
+                    <li><a href=""> Nome Playlist</a></li>
+                    <li><a href=""> Nome Playlist</a></li>
                 </ul>
             </div>
+            
 
             <!-- ACCOUNT NAME + DOWNLOAD APP SECTION -->
 
             <div class="account pad-all">
-                <span><i class="fa-solid fa-circle-down pad-small"></i> Installa app</span>
+                <span class="c-grey"><i class="fa-solid fa-circle-down pad-all"></i> Installa app</span>
                 <hr>
-                <span><i class="fa-solid fa-user pad-small"></i> John Doe</span>
+                <span><i class="fa-solid fa-user pad-all"></i> John Doe</span>
             </div>
         </div>
+        
 
         <!-- BARRA SUPERIORE -->
         <div class="main-content">
@@ -70,33 +73,39 @@
             </header>
             <div class="top-bar">
                 <div class="top-bar-col">
-                    <div class="top-bar-card txt-center">
+                    <div class="top-bar-card txt-center pos-rel">
                         <a href="#">IN EVIDENZA</a>
+                        <div class="green-border"></div>
                     </div>
                 </div>
                 <div class="top-bar-col">
-                    <div class="top-bar-card txt-center">
+                    <div class="top-bar-card txt-center pos-rel">
                         <a href="#">PODCAST</a>
+                        <div class="green-border"></div>
                     </div>
                 </div>
                 <div class="top-bar-col">
-                    <div class="top-bar-card txt-center">
+                    <div class="top-bar-card txt-center pos-rel">
                         <a href="#">CLASSIFICHE</a>
+                        <div class="green-border"></div>
                     </div>
                 </div>
                 <div class="top-bar-col">
-                    <div class="top-bar-card txt-center">
+                    <div class="top-bar-card txt-center pos-rel">
                         <a href="#">GENERI E MOOD</a>
+                        <div class="green-border"></div>
                     </div>
                 </div>
                 <div class="top-bar-col">
-                    <div class="top-bar-card txt-center">
+                    <div class="top-bar-card txt-center pos-rel">
                         <a href="#">NUOVE USCITE</a>
+                        <div class="green-border"></div>
                     </div>
                 </div>
                 <div class="top-bar-col">
-                    <div class="top-bar-card txt-center">
+                    <div class="top-bar-card txt-center pos-rel">
                         <a href="#">SCOPRI</a>
+                        <div class="green-border"></div>
                     </div>
                 </div>
             </div>
@@ -269,7 +278,7 @@
                 </div>
 
                 <div class="pad-small w100 d-flex flex-dir-clmn">
-                    <span>Sinister</span>
+                    <span class="c-white">Sinister</span>
                     <span>brano nome</span>
                 </div>
                 <div class="icons-left-play-bar">
@@ -289,23 +298,26 @@
                 </div>
                 <!-- PROGRESSO BARRA ASCOLTO -->
                 <div class="reproduction-time">
-                    <div class="left-timer">
+                    <div class="left-timer pad-small">
                         <time>00:25</time>
                     </div>
-                    <div class="time">
-
+                    <div class="time pos-rel">
+                        <i class="fa-solid fa-circle"></i>
                     </div>
-                    <div class="right-timer">
+                    <div class="right-timer pad-small">
                         <time>04:35</time>
                     </div>
                 </div>
             </div>
             <!-- PLAY-BAR RIGHT -->
             <div class="volume">
-                <div class="volume-icons">
+                <div class="volume-icons d-flex">
                     <i class="fa-solid fa-bars"></i>
                     <i class="fa-solid fa-display"></i>
                     <i class="fa-solid fa-volume-high"></i>
+                    <div class="volume-bar pos-rel">
+                        <i class="fa-solid fa-circle"></i>
+                    </div>
                 </div>
             </div>
         </div>
