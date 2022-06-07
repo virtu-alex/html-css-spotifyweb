@@ -8,7 +8,8 @@
     <script src="https://kit.fontawesome.com/3ec4a20eeb.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Titolo</title>
@@ -16,17 +17,30 @@
 
 <body class="debug">
 
-    <!-- SIDEBAR -->
+    <!-- CONTENITORE PRINCIPALE -->
 
     <div class="main-container">
-        
-        
+
+        <!-- UPGRADE BUTTON + HEADER -->
+
+        <header>
+            <div class="upgrade-button">
+                <button class="pad-all"><a href="">Effettua l'upgrade</a></button>
+            </div>
+        </header>
+
+        <!-- SIDEBAR -->
+
         <div class="side-bar">
+
             <!-- LOGO SECTION -->
+
             <div class="logo">
                 <img src="img/logo.svg" alt="">
             </div>
+
             <!-- LIBRARY SECTION -->
+
             <div class="library">
                 <ul>
                     <li><i class="fa-solid fa-house pad-small"></i><a href="#"> Home</a></li>
@@ -44,33 +58,37 @@
                     </li>
                     <li><i class="fa-solid fa-plus pad-all"></i><a class="pad-small" href="">Crea Playlist</a></li>
                     <li class="pad-all"><a href="">Nome Playlist</a></li>
-                    <li><a href=""> Nome Playlist</a></li>
-                    <li><a href=""> Nome Playlist</a></li>
-                    <li><a href=""> Nome Playlist</a></li>
-                    <li><a href=""> Nome Playlist</a></li>
-                    <li><a href=""> Nome Playlist</a></li>
-                    <li><a href=""> Nome Playlist</a></li>
+                    <li><a href="">Nome Playlist</a></li>
+                    <li><a href="">Nome Playlist</a></li>
+                    <li><a href="">Nome Playlist</a></li>
+                    <li><a href="">Nome Playlist</a></li>
+                    <li><a href="">Nome Playlist</a></li>
+                    <li><a href="">Nome Playlist</a></li>
                 </ul>
+                <div class="playlist-top-swap d-flex">
+                    <a href="#"><i class="fa-brands fa-spotify fa-2x"></i></a>
+                    <a href="#"><i class="fa-solid fa-house fa-2x"></i></a>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass fa-2x"></i></i></a>
+                    <a href="#"><i class="fa-solid fa-book-open fa-2x"></i></a>
+                </div>
+                <div class="playlist-bottom-swap d-flex">
+                    <a href="#"><i class="fa-solid fa-circle-arrow-down fa-2x"></i></a>
+                    <a href="#"><i class="fa-solid fa-user fa-2x"></i></a>
+                </div>
             </div>
-            
 
             <!-- ACCOUNT NAME + DOWNLOAD APP SECTION -->
 
             <div class="account pad-all">
-                <span class="c-grey"><i class="fa-solid fa-circle-down pad-all"></i> Installa app</span>
+                <span class="c-grey"><i class="fa-solid fa-circle-down pad-all"></i>Installa app</span>
                 <hr>
-                <span><i class="fa-solid fa-user pad-all"></i> John Doe</span>
+                <span><i class="fa-solid fa-user pad-all"></i>Alessio Cordari</span>
             </div>
         </div>
-        
 
         <!-- BARRA SUPERIORE -->
+
         <div class="main-content">
-            <header>
-                <div class="upgrade-button">
-                    <button class="pad-all"><a href="">Effettua l'upgrade</a></button>
-                </div>
-            </header>
             <div class="top-bar">
                 <div class="top-bar-col">
                     <div class="top-bar-card txt-center pos-rel">
@@ -110,15 +128,14 @@
                 </div>
             </div>
 
-            <!-- UPGRADE BUTTON -->
-
-
             <!-- TITOLI RECENTEMENTE ASCOLTATI -->
 
             <div class="title-recent pad-all">
                 <h2>Recently Played</h2>
             </div>
+
             <!-- HEAVY METAL CARD -->
+
             <div class="recent-play">
                 <div class="recent-col pad-all">
                     <div class="recent-card pos-rel">
@@ -132,7 +149,9 @@
                         <span>Subtitle</span>
                     </div>
                 </div>
+
                 <!-- STRANGER THINGS CARD -->
+
                 <div class="recent-col pad-all">
                     <div class="recent-card pos-rel">
                         <div class="hover-swap">
@@ -145,7 +164,9 @@
                         <span>Kyle Dixon & Micheal Stein</span>
                     </div>
                 </div>
+
                 <!-- A QUIET PLACE CARD -->
+
                 <div class="recent-col pad-all">
                     <div class="recent-card pos-rel">
                         <div class="hover-swap">
@@ -158,7 +179,9 @@
                         <span>Subtitle</span>
                     </div>
                 </div>
+
                 <!-- SPLIT CARD -->
+
                 <div class="recent-col pad-all">
                     <div class="recent-card pos-rel">
                         <div class="hover-swap">
@@ -171,7 +194,9 @@
                         <span>Subtitle</span>
                     </div>
                 </div>
+
                 <!-- A CURE FOR WELLNESS CARD -->
+
                 <div class="recent-col pad-all">
                     <div class="recent-card pos-rel">
                         <div class="hover-swap">
@@ -184,7 +209,9 @@
                         <span>Subtitle</span>
                     </div>
                 </div>
+
                 <!-- SINISTER CARD -->
+
                 <div class="recent-col pad-all">
                     <div class="recent-card pos-rel">
                         <div class="hover-swap">
@@ -199,15 +226,17 @@
                 </div>
             </div>
 
-            <!-- CREATED FOR JOHN DOE -->
+            <!-- CREATED FOR ALESSIO CORDARI -->
 
             <div class="pad-all">
-                <h2>Creato per John Doe</h2>
+                <h2>Creato per Alessio Cordari</h2>
                 <h4>Pi&uacute; ascolti, pi&uacute; accurati saranno i suggerimenti.</h4>
             </div>
-            <!-- CARD 1 -->
-            <div class="created-for">
-                <div class="created-for-col pad-all">                    
+
+            <!-- RADAR CARD -->
+
+            <div class="created-for d-flex">
+                <div class="created-for-col pad-all">
                     <div class="created-for-card txt-center pos-rel">
                         <div class="hover-swap">
                             <i class="fa-solid fa-circle-play"></i>
@@ -218,7 +247,9 @@
                         <h4 class="pad-all">Release radar</h4>
                     </div>
                 </div>
-                <!-- CARD 2 -->
+
+                <!-- DAILY MIX CARD -->
+
                 <div class="created-for-col pad-all">
                     <div class="created-for-card txt-center pos-rel">
                         <div class="hover-swap">
@@ -229,9 +260,7 @@
                     <div class="subtitle-song txt-center">
                         <h4 class="pad-all">Daily Mix</h4>
                     </div>
-
                 </div>
-
             </div>
 
             <!-- POPULAR ARTISTS -->
@@ -240,7 +269,9 @@
                 <h2>Popular artists</h2>
                 <h4>Pi&uacute; ascolti, pi&uacute; accurati saranno i suggerimenti.</h4>
             </div>
-            <!-- ARTISTA 1 -->
+
+            <!-- ARTISTA POPOLARE 1 -->
+
             <div class="popular-artists">
                 <div class="popular-col pad-all">
                     <div class="popular-card pos-rel">
@@ -253,7 +284,9 @@
                         <h4 class="pad-all">Lana Del Rey</h4>
                     </div>
                 </div>
-                <!-- ARTISTA 2 -->
+
+                <!-- ARTISTA POPOLARE 2 -->
+
                 <div class="popular-col pad-all">
                     <div class="popular-card pos-rel">
                         <div class="hover-swap">
@@ -261,17 +294,20 @@
                         </div>
                         <img class="b-radius50" src="img/einaudi.jpeg" alt="enaudi">
                     </div>
-                        <div class="subtitle-song txt-center">
-                            <h4 class="pad-all">Ludovico Einaudi</h4>
-                        </div>
+
+                    <div class="subtitle-song txt-center">
+                        <h4 class="pad-all">Ludovico Einaudi</h4>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- PLAY-BAR -->
+        <!-- PLAY-BAR / FOOTER -->
 
         <div class="play-bar">
+
             <!-- PLAY-BAR LEFT -->
+
             <div class="song-name pad-all">
                 <div class="img-play-bar">
                     <img src="img/sinister.jpeg" alt="">
@@ -279,24 +315,31 @@
 
                 <div class="pad-small w100 d-flex flex-dir-clmn">
                     <span class="c-white">Sinister</span>
-                    <span>brano nome</span>
+                    <span>Brano nome</span>
                 </div>
+
                 <div class="icons-left-play-bar">
                     <i class="fa-solid fa-heart pad-bot10"></i>
                     <i class="fa-solid fa-folder"></i>
                 </div>
             </div>
+
             <!-- PLAY-BAR CENTER -->
+
             <div class="reproduction-bar">
                 <div class="reproduction-icons">
+
                     <!-- TASTI RIPRODUZIONE -->
+
                     <i class="fa-solid fa-shuffle"></i>
                     <i class="fa-solid fa-backward-step"></i>
-                    <i class="fa-solid fa-circle-play"></i>
+                    <i class="fa-regular fa-circle-play"></i>
                     <i class="fa-solid fa-forward-step"></i>
                     <i class="fa-solid fa-arrow-rotate-right"></i>
                 </div>
+
                 <!-- PROGRESSO BARRA ASCOLTO -->
+
                 <div class="reproduction-time">
                     <div class="left-timer pad-small">
                         <time>00:25</time>
@@ -309,12 +352,14 @@
                     </div>
                 </div>
             </div>
+
             <!-- PLAY-BAR RIGHT -->
+
             <div class="volume">
                 <div class="volume-icons d-flex">
-                    <i class="fa-solid fa-bars"></i>
-                    <i class="fa-solid fa-display"></i>
-                    <i class="fa-solid fa-volume-high"></i>
+                    <a href="#"><i class="fa-solid fa-bars"></i></a>
+                    <a href="#"><i class="fa-solid fa-display"></i></a>
+                    <a href="#"><i class="fa-solid fa-volume-high"></i></a>
                     <div class="volume-bar pos-rel">
                         <i class="fa-solid fa-circle"></i>
                     </div>

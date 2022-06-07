@@ -42,6 +42,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 img {
@@ -57,7 +58,6 @@ h4 {
 }
 
 /* UTILS */
-
 
 .pad-small {
     padding: 0px 10px;
@@ -91,15 +91,15 @@ h4 {
     border-radius: 50%;
 }
 
-.c-black{
+.c-black {
     color: black;
 }
 
-.c-grey{
+.c-grey {
     color: grey;
 }
 
-.c-white{
+.c-white {
     color: white;
 }
 
@@ -108,7 +108,6 @@ h4 {
 }
 
 /* ICONS */
-
 
 .fa-plus {
     color: black;
@@ -136,6 +135,8 @@ button a {
     border-radius: 30px;
 }
 
+/* HEADER */
+
 header {
     background-color: #080B12;
     position: fixed;
@@ -161,7 +162,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-    
+
 }
 
 /* SIDEBAR CONTAINER */
@@ -173,7 +174,7 @@ header {
     flex-direction: column;
     background-color: black;
     z-index: 2;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 /* SIDEBAR LOGO */
@@ -199,12 +200,12 @@ header {
     color: grey;
 }
 
-
 /* SIDEBAR PLAYLIST */
 
 .playlist {
     flex: 1 1 80%;
     padding-left: 10px;
+    overflow: auto;
 }
 
 .playlist ul li {
@@ -213,8 +214,36 @@ header {
     color: grey;
 }
 
-.playlist ul li a{
+.playlist ul li a {
     color: grey;
+}
+
+/* SIDEBAR SWAP EFFECT WHEN XS RESOLUTION */
+
+.playlist-top-swap {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    left: 15px;
+    top: 20px;
+}
+
+.playlist-top-swap i {
+    padding-bottom: 20px;
+    color: white;
+}
+
+.playlist-bottom-swap {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    top: 85%;
+    left: 20px;
+}
+
+.playlist-bottom-swap i {
+    color: white;
+    padding-bottom: 20px;
 }
 
 /* SIDEBAR ACCOUNT */
@@ -231,7 +260,7 @@ header {
     background-color: #141922;
     overflow-y: auto;
     padding-top: var(--logo-h);
-    
+
 }
 
 /* TOP BAR */
@@ -241,6 +270,8 @@ header {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 30px;
+
 }
 
 .top-bar-col {
@@ -256,27 +287,34 @@ header {
 
 /* GREEN BORDER HOVER EFFECT TOP BAR */
 
-.green-border{
+.green-border {
     display: none;
     position: absolute;
     background-color: green;
     height: 3px;
-    width: 55%;
-    left: 25px;
+    width: 40%;
+    left: 30px;
 }
 
-.top-bar-card:hover .green-border{
+.top-bar-card:hover .green-border {
     display: block;
 }
+
 /* RECENTLY PLAYED MUSIC */
 
 .recent-play {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 .recent-col {
     width: var(--w-50);
+}
+
+.title-recent {
+    margin-bottom: 30px;
+
 }
 
 /* HOVER RECENTLY PLAYED */
@@ -303,14 +341,27 @@ header {
     display: block;
 }
 
+.recent-col:hover {
+    transform: translateY(-20px) scale(1.1);
+}
+
+.recent-col {
+    transition: transform 0.7s ease-in-out;
+}
+
 /* CREATED FOR */
 
-.created-for {
-    display: flex;
+.created-for-col {
+    margin-top: 30px;
+    width: var(--w-50)
+}
+
+.created-for-col:hover {
+    transform: translateY(-20px) scale(1.1);
 }
 
 .created-for-col {
-    width: var(--w-50)
+    transition: transform 0.7s ease-in-out;
 }
 
 /* CREATED FOR HOVER EFFECT */
@@ -327,6 +378,7 @@ header {
 
 .popular-col {
     width: var(--w-50);
+    margin-top: 30px;
 }
 
 /* POPULAR ARTISTS HOVER EFFECT */
@@ -334,6 +386,14 @@ header {
 .popular-card:hover .hover-swap {
     display: block;
     border-radius: 50%;
+}
+
+.popular-col:hover {
+    transform: translateY(-20px) scale(1.1);
+}
+
+.popular-col {
+    transition: transform 0.7s ease-in-out;
 }
 
 /* PLAY-BAR CONTAINER */
@@ -376,7 +436,7 @@ header {
 }
 
 .reproduction-bar i {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .reproduction-icons {
@@ -426,7 +486,6 @@ header {
     color: grey;
 }
 
-
 .volume-bar:hover .fa-circle {
     display: block;
 }
@@ -449,61 +508,158 @@ header {
     padding: 5px;
 }
 
+/* SOME RANDOM HOVER EFFECTS FOR TRAINING */
 
+.song-name .fa-folder:hover {
+    color: rgb(133, 71, 21);
+    transform: scale(1.5);
+    transition: transform .5s linear;
+}
+
+.song-name img:hover {
+    transform: scale(1.15);
+    transition: .5s;
+}
+
+.song-name .fa-heart:hover {
+    color: red;
+    transform: scale(1.5);
+    transition: transform .5s linear;
+}
+
+.volume-icons i:hover {
+    transition: transform 0.5s;
+    transform: scale(1.3);
+}
+
+.reproduction-icons i:hover {
+    transform: scale(1.5);
+    transition: transform .5s linear;
+}
+
+.reproduction-time:hover {
+    transition: transform 0.5s;
+    transform: scale(1.1);
+}
+
+/* INIZIO QUERY CHANGES */
 
 /* MEDIA QUERY TABLET 992 px */
 
 
 @media screen and (min-width: 992px) {
-    
+
     .recent-col {
         width: var(--w-25);
     }
-    
+
     .top-bar-col {
         width: calc(100% / 5);
     }
-    
+
     .created-for-col {
         width: var(--w-25);
     }
-    
+
     .popular-col {
         width: var(--w-25);
+    }
+    .green-border{
+        left: 40px;
     }
 }
 
 /* MEDIA QUERY DESKTOP 1200 px */
 
 @media screen and (min-width: 1200px) {
-    
+
     .top-bar-col {
         width: calc(100%/ 6);
     }
-    
+
     .recent-col {
         width: calc(100% / 6);
     }
-    
+
     .created-for-col {
-        width: var(--w-25);
+        width: var(--w-20);
+    }
+
+    .popular-col {
+        width: var(--w-20);
+    }
+    
+    .green-border{
+        left: 50px;
+    }
+    .song-name i{
+        display: block;
     }
 }
 
 /* MEDIA QUERY XS 576px */
 
 @media screen and (max-width: 576px) {
-    
+
     .top-bar-col {
         width: calc(100%/ 4);
     }
-    
-    .side-bar{
+
+    .side-bar {
         width: 70px;
+        position: relative;
     }
 
-    .side-bar *{
-        display: none; 
+    .side-bar li {
+        display: none;
     }
-    
+
+    .side-bar .logo {
+        display: none;
+    }
+
+    .side-bar span {
+        display: none;
+    }
+
+    .side-bar hr {
+        display: none;
+    }
+
+    .play-bar .volume-bar {
+        display: none
+    }
+
+    .play-bar img {
+        display: none
+    }
+
+    .play-bar .reproduction-bar {
+        transform: scale(0.8);
+    }
+
+    .play-bar .volume-icons {
+        transform: scale(0.8);
+    }
+
+    .play-bar .song-name {
+        flex-direction: row-reverse;
+        transform: scale(0.8);
+    }
+
+    .playlist-top-swap {
+        display: block;
+    }
+
+    .playlist-bottom-swap {
+        display: block;
+    }
+
+    .top-bar-card a {
+        font-size: 0.7rem;
+    }
+
+    .song-name i {
+        padding-right: 30px;
+    }
 }
